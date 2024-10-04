@@ -5,11 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 export const routes: Routes = [
-  {
-    path: '',
-    title: 'Accueil',
-    component: HomeComponent,
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home',
     title: 'Accueil',
@@ -30,4 +26,5 @@ export const routes: Routes = [
     title: 'Services',
     component: ServicesComponent,
   },
+  { path: '**', redirectTo: '/home' },
 ];

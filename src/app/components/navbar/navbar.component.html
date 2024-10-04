@@ -5,50 +5,58 @@
   >
     <img class="w-28" src="KDev/logo.png" alt="logo" />
   </a>
-  <nav class="header-links contents font-semibold text-base lg:text-lg">
+  <nav class="contents font-semibold text-base lg:text-lg">
     <ul class="flex items-center ml-4 xl:ml-8 mr-auto">
-      <li
-        class="p-3 xl:p-6"
-        [ngClass]="{
-          ' active ': isActive('/home'),
-          '': !isActive('/home')
-        }"
-      >
+      <li class="p-3 xl:p-6 relative">
         <a routerLink="/home">
-          <span>Accueil</span>
+          <span
+            class="relative z-0 after:content-[''] after:absolute after:left-[-4px] after:right-[-4px] after:bottom-[2px] after:h-[6px] after:z-[-1] after:bg-transparent after:transition-colors after:duration-500 hover:after:bg-gray-300"
+            [ngClass]="{
+              'after:bg-customOrange hover:after:bg-customOrange':
+                isActive('/home')
+            }"
+          >
+            Accueil
+          </span>
         </a>
       </li>
-      <li
-        class="p-3 xl:p-6"
-        [ngClass]="{
-          ' active ': isActive('/services'),
-          '': !isActive('/services')
-        }"
-      >
+      <li class="p-3 xl:p-6 relative">
         <a routerLink="/services">
-          <span>Services</span>
+          <span
+            class="relative z-0 after:content-[''] after:absolute after:left-[-4px] after:right-[-4px] after:bottom-[2px] after:h-[6px] after:z-[-1] after:bg-transparent after:transition-colors after:duration-500 hover:after:bg-gray-300"
+            [ngClass]="{
+              'after:bg-customOrange hover:after:bg-customOrange':
+                isActive('/services')
+            }"
+          >
+            Services
+          </span>
         </a>
       </li>
-      <li
-        class="p-3 xl:p-6"
-        [ngClass]="{
-          ' active ': isActive('/apropos'),
-          '': !isActive('/apropos')
-        }"
-      >
+      <li class="p-3 xl:p-6 relative">
         <a routerLink="/apropos">
-          <span>A propos</span>
+          <span
+            class="relative z-0 after:content-[''] after:absolute after:left-[-4px] after:right-[-4px] after:bottom-[2px] after:h-[6px] after:z-[-1] after:bg-transparent after:transition-colors after:duration-500 hover:after:bg-gray-300"
+            [ngClass]="{
+              'after:bg-customOrange hover:after:bg-customOrange':
+                isActive('/apropos')
+            }"
+          >
+            A propos
+          </span>
         </a>
       </li>
-      <li
-        class="p-3 xl:p-6"
-        [ngClass]="{
-          ' active ': isActive('/contact'),
-          '': !isActive('/contact')
-        }"
-      >
+      <li class="p-3 xl:p-6 relative">
         <a routerLink="/contact">
-          <span>Contact</span>
+          <span
+            class="relative z-0 after:content-[''] after:absolute after:left-[-4px] after:right-[-4px] after:bottom-[2px] after:h-[6px] after:z-[-1] after:bg-transparent after:transition-colors after:duration-500 hover:after:bg-gray-300"
+            [ngClass]="{
+              'after:bg-customOrange hover:after:bg-customOrange':
+                isActive('/contact')
+            }"
+          >
+            Contact
+          </span>
         </a>
       </li>
     </ul>
